@@ -22,6 +22,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../easy_loading.dart';
 import '../theme.dart';
@@ -197,6 +198,12 @@ class _LoadingIndicatorState extends State<LoadingIndicator> {
         _indicator = SpinKitSquareCircle(
           color: _indicatorColor,
           size: _size,
+        );
+        break;
+      case EasyLoadingIndicatorType.cupertino:
+        _indicator = CupertinoActivityIndicator(
+          color: _indicatorColor,
+          radius: _size,
         );
         break;
       default:
