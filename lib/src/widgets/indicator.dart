@@ -199,6 +199,12 @@ class _LoadingIndicatorState extends State<LoadingIndicator> {
           size: _size,
         );
         break;
+      case EasyLoadingIndicatorType.cupertino:
+        _indicator = CupertinoActivityIndicator(
+          color: _indicatorColor,
+          radius: _size,
+        );
+        break;
       default:
         _indicator = SpinKitFadingCircle(
           color: _indicatorColor,
